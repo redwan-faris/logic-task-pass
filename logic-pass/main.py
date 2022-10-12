@@ -3,7 +3,12 @@ import math
 from sqlalchemy import false;
 
 def remove_char(str,char):
-    return str.replace(char,'')
+    newStr = ''
+    for i in range(len(str)):
+        if str[i] != char :
+            newStr = newStr + str[i]
+    return newStr
+    
 
 
 #For some reasone i read it as even so this is the new sul:
@@ -16,8 +21,7 @@ def find_primes(n):
                     break
             else:
                 primes.append(num)
-   return primes
-print(find_primes(50))
+   return primes 
 
 
 def count_repeated_characters(str,char):
